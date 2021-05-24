@@ -25,8 +25,13 @@ def square_func(num):
         print(number, "is not a perfect square")
 
 
+# User defined function for cube root
+def curt_func(n):
+    return n ** (1 / 3)
+
+
 def cube_func(num):
-    cube_1 = round(num ** (1 / 3))
+    cube_1 = curt_func(num)
     if cube_1 * cube_1 * cube_1 == num:
         print(number, " is a perfect cube number")
         return
@@ -50,15 +55,17 @@ def fact_func(num):
 
 def pal_func(num):
     reverse = 0
-
-    while num > 0:
-        rem = num % 10
-        reverse = (reverse * 10) + rem
-        num = num // 10
-    if number == reverse:
-        print("%d is a Palindrome Number" % number)
+    if num >= 10:
+        while num > 0:
+            rem = num % 10
+            reverse = (reverse * 10) + rem
+            num = num // 10
+        if number == reverse:
+            print("%d is a Palindrome Number" % number)
+        else:
+            print("%d is not a Palindrome Number" % number)
     else:
-        print("%d is not a Palindrome Number" % number)
+        print("Not a palindrome.Enter 2+ digit number ")
 
 
 def neon_func(num):
@@ -73,10 +80,10 @@ def neon_func(num):
         return print("It is not a neon number")
 
 
-def fib_func(n):
+def fib_func(num):
     print("calculating fibonacci series......")
     a, b = 0, 1
-    while a < n:
+    while a < num:
         print(a, end=' ')
         a, b = b, a + b
     print()
@@ -123,7 +130,7 @@ def hd_func(num):
         print(number, "is not a harshad number")
 
 
-# List containing text and calling function
+# List containing text and function
 choices = [
     {
         "text": "0.Prime number",
@@ -166,7 +173,7 @@ choices = [
         "func": hd_func
     },
     {
-        "text": "Enter the number withing range(0-9)"
+        "text": "Enter the choice index within range(0-9)"
     }
 ]
 # print(choices["one"]["func"]())
