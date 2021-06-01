@@ -19,7 +19,7 @@ def sqrt(n):
 
 def square_func(num):
     root = sqrt(num)
-    if int(root + 0.5) ** 2 == number:
+    if int(root) ** 2 == number:
         print(number, "is a perfect square")
     else:
         print(number, "is not a perfect square")
