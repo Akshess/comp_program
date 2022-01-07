@@ -130,7 +130,7 @@ def hd_func(num):
         print(number, "is not a harshad number")
 
 
-# List containing text and function
+# List containing dict holding text and function
 choices = [
     {
         "text": "0.Prime number",
@@ -179,12 +179,12 @@ choices = [
 # print(choices["one"]["func"]())
 # print(choices["two"]["func"]())
 # print(choices.keys())
-number = int(input("ENTER THE NUMBER : "))
+number = int(input("ENTER THE NUMBER : ")) #input for the menu
 # print(number)
-for item in choices:
-    print(item["text"])
-your_choice = int(input("ENTER YOUR CHOICE:"))
+for item in choices: 
+    print(item["text"]) # print all the menu text
+your_choice = int(input("ENTER YOUR CHOICE:")) #Entering the choice
 # print(your_choice)
-your = choices[your_choice]
+your = choices[your_choice] 
 var1 = your["func"]
 var1(number)
